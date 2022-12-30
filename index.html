@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>TS using Local Storage</title>
+    <script src="https://kit.fontawesome.com/1d78ac0dfc.js" crossorigin="anonymous"></script>
+    <script src="storeData.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+
+        <legend>
+          <h2> CREATE TASK</h2>
+        </legend>
+    
+    <form>
+        <label for="id">Task ID</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" placeholder="TASKID" id="taskid"><br><br>
+
+        <label for="name">Task name:</label>&nbsp;
+        <input type="text" id="taskname" name="name" placeholder="Task name"><br><br>
+
+        
+        <label for="taskstatus">Task Status</label>
+        <select name="tstatus" id="status">&nbsp;&nbsp;&nbsp;&nbsp;
+        <option value="Ongoing">Ongoing</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+        </select><br><br>
+
+        <label for="start time">Start Time</label>&nbsp;&nbsp;
+        <input type="time" id="starttime" name="start time" placeholder="Start Time"><br><br>
+        
+
+        <label for="end time">End Time</label>&nbsp;&nbsp;
+        <input type="time" id="endtime" name="end time" placeholder="End Time"><br><br>
+        <br>
+        
+        <input type="button" value="Submit" onclick="taskinfo.onFormSubmit()"></input>
+
+        <br><br>
+    <div id="msg" class="tasklist" style="color:red; font-size:30px;text-align: center;"> 
+    
+    </div>
+
+      <fieldset>
+        <legend>
+          <h2> Search Data</h2>
+        </legend>
+        <input type="text" placeholder="Search.." name="search" id="searchbtn" onkeyup="taskinfo.searchTableColumns()">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </fieldset>
+        <legend>
+          <h2> Data From Local Storage</h2>
+        </legend>
+    </form>
+  </body>
+</html>
